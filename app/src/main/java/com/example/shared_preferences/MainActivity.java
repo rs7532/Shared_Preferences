@@ -1,5 +1,6 @@
 package com.example.shared_preferences;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -7,6 +8,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.Telephony;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -79,13 +82,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * <p>
-     *     the function get a variable of View type,
-     *     the function will transfer us to the credits screen
+     * <p
+     *      the function get a variable of Menu type
      * </>
+     * @return the function will create a general menu
      */
-    public void Credits_pressed(View view) {
-        si = new Intent(this, Credits.class);
-        startActivity(si);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    /**
+     * <p
+     *      the function get a variable of MenuItem type
+     * </>
+     * @return the function will as the user choice will return to the main screen or close the menu
+     */
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        String st = item.getTitle().toString();
+        if(st.equals("move screen")){
+            finish();
+        }
+        else{
+            closeOptionsMenu();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

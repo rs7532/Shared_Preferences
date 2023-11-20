@@ -42,7 +42,7 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <LinearLayout
@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteX="411dp">
 
         <Space
-            android:layout_width="140dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent" />
 
         <LinearLayout
@@ -83,7 +83,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="320dp" />
+                android:layout_height="270dp" />
 
             <Button
                 android:layout_width="200dp"
@@ -101,7 +101,7 @@
         tools:layout_editor_absoluteX="411dp">
 
         <Space
-            android:layout_width="140dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent" />
 
         <LinearLayout
@@ -111,7 +111,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="435dp" />
+                android:layout_height="370dp" />
 
             <Button
                 android:layout_width="200dp"
@@ -129,7 +129,7 @@
         tools:layout_editor_absoluteX="411dp">
 
         <Space
-            android:layout_width="140dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent" />
 
         <LinearLayout
@@ -139,7 +139,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="550dp" />
+                android:layout_height="470dp" />
 
             <Button
                 android:layout_width="200dp"
@@ -150,32 +150,4 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="411dp">
-
-        <Space
-            android:layout_width="300dp"
-            android:layout_height="match_parent" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="670dp" />
-
-            <Button
-                android:id="@+id/credits_btn"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="credits"
-                android:onClick="Credits_pressed"/>
-        </LinearLayout>
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

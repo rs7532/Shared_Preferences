@@ -3,6 +3,7 @@ package com.example.shared_preferences;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,8 +42,9 @@ public class Credits extends AppCompatActivity {
      */
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         String st = item.getTitle().toString();
-        if(st.equals("main screen")){
-            finish();
+        if(st.equals("move screen")){
+            Intent si = new Intent(this, Credits.class);
+            startActivity(si);
         }
         else{
             closeOptionsMenu();
